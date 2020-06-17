@@ -1,0 +1,19 @@
+name: CI
+
+# check this step on every push
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: configure
+      run: mkdir build && cd build && cmake ..
+    - name: build
+      run: cd build && cmake --build .
+    - name: test
+      run: cd build && ctest --verbose
+
