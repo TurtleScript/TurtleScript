@@ -1,3 +1,3 @@
+#define CATCH_CONFIG_MAIN
 #include <catch.hpp>
-
-TEST_CASE("Pass Tests") { REQUIRE(1 == 1); }
+#include <test_scanner.hh>
