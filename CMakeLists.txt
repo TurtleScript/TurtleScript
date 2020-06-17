@@ -3,11 +3,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 project (TurtleScript)
 
-add_subdirectory(
-    ${CMAKE_SOURCE_DIR}/parser
-    ${CMAKE_SOURCE_DIR}/test
-)
+add_subdirectory(${CMAKE_SOURCE_DIR}/parser)
 
-enable_testing ()
-add_test(NAME tests COMMAND tests)
+enable_testing()
+add_subdirectory(${CMAKE_SOURCE_DIR}/test)
 
