@@ -4,9 +4,9 @@
 
 namespace tu {
 enum token {
-  T_INT = 258,
+  T_INT = 257,
   T_FLOAT,
 };
-}
+} // namespace tu
 
 #endif // END TOKENS_HH_
