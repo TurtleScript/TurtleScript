@@ -10,6 +10,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: install dependencies
+      run: sudo apt-get install flex
     - name: configure
       run: mkdir build && cd build && cmake ..
     - name: build
