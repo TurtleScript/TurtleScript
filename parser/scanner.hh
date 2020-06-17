@@ -5,6 +5,12 @@
 #include <FlexLexer.h>
 #endif
 
-namespace tu {};
+namespace tu {
+class Scanner : public yyFlexLexer {
+public:
+  Scanner(std::istream *input);
+  virtual int yylex();
+};
+} // namespace tu
 
 #endif /* END SCANNER_HH_ */

@@ -1,11 +1,12 @@
 /* this file will generate the actual scanner for TurtleScript */
 %option noyywrap
 %option yylineno
-%option yyclass=tu::Scanner
+%option yyclass="tu::Scanner"
 %option c++
 
 %{
 #include "tokens.hh"
+#include "scanner.hh"
 %}
 
 t_identifier [_a-zA-Z][_0-9a-zA-Z]*
